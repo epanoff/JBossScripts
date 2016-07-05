@@ -21,5 +21,3 @@ do
     curl --digest -u $USER:$PASSWORD 'http://$MANAGEMENT_SERVER:9990/management' --header "Content-Type: application/json" -d "{\"operation\":add\",\"binding-type\":\"simple\",\"type\":\"java.lang.String\",\"value\":\"${JNDI_STRING:AFTER_EQUAL}\", \"address\":[\"subsystem\",\"naming\",\"binding\",\"${JNDI_STRING:0:BEFORE_EQUAL}\"], \"json.pretty\":1}"
 
 done
-
-
