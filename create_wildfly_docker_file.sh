@@ -35,7 +35,7 @@ else
 fi
 echo "quit\"" >> $DOCKER_FILENAME
 
-echo "COPY WebEar/target/MVideo_Services_Platform.ear /opt/wildfly/standalone/deployments/" >> $DOCKER_FILENAME
+echo "ADD WebEar/target/MVideo_Services_Platform.ear /opt/wildfly/standalone/deployments/" >> $DOCKER_FILENAME
 
 echo "CMD ["/opt/jboss/wildfly/bin/standalone.sh", "-b", "0.0.0.0", "-bmanagement", "0.0.0.0"]" >> $DOCKER_FILENAME
 
